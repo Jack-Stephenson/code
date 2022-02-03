@@ -27,7 +27,6 @@ function App() {
             <ArmorView />
           </Route>
           <Route exact path={'/:equipment'}>
-
           </Route>
         </Switch>
       </div>

@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'medieval';
+  src: local('medieval'),
+      url("./fonts/OldLondon.ttf");
+}
+
+.forge {
+  height: 1300px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.mainLink {
+  text-align: center;
+  color: red;
+  font-family: medieval;
+}
+
+.link {
+  color: red;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.button {
+  color: red;
+  background-color: transparent
+}
+
+.label {
+  color: red
+}

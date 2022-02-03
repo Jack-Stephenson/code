@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import background from "../../imgs/forge.jpeg"
+
 const ArmorView = () => {
     const [search, setSearch] = useState('')
     const [recipeName, setRecipeName] = useState('')
@@ -33,11 +35,11 @@ const ArmorView = () => {
         setSearch(equipment.name)
     }
     return (
-        <div>
+        <div  className="forge" style={{ backgroundImage: `url(${background})` }}>
             <div>
                 <form onSubmit={submitHandler}>
                     <p>
-                        <label htmlFor="">Search for your equipment:</label><br />
+                        <label className="label" htmlFor="">Search for your equipment:</label><br />
                         <input type="text" onChange={(e) => setSearch(e.target.value)} value={search} />
                     </p>
                     <input type="submit" value="Search" />
