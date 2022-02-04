@@ -1,11 +1,15 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import background from "../../imgs/forge.jpeg"
+
 
 const Home =()=>{
+
     return (
-        <div>
+        <div className="forge" style={{ backgroundImage: `url(${background})` }}>
             <div>
-                <button><Link to={'/equip_select'}><h1>Select Equipment!</h1></Link></button>
+                
+                <button className="button"><Link to={'/equip_select'} className="mainLink"><h1>Select Thy Equipment</h1></Link></button>
             </div>
         </div>
     )

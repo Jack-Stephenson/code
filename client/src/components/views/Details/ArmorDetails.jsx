@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-const WeaponDetails = () => {
+const ArmorDetails = () => {
     const { equipment } = useParams();
     const [equipmentDetail, setEquipmentDetail] = useState({})
     const [monsters, setMonsters] = useState([])
     const [materials, setMaterials] = useState([])
     let lastMonster = '';
     useEffect(() => {
-        axios.get(`https://mhw-db.com/weapons/${equipment}`)
+        axios.get(`https://mhw-db.com/armor/${equipment}`)
             .then(res => {
                 setEquipmentDetail(res.data)
-                res.data.crafting.craftingMaterials.length ? setMaterials(res.data.crafting.craftingMaterials) : setMaterials(res.data.crafting.upgradeMaterials)
+                setMaterials(res.data.crafting.materials)
             })
             .catch(err => console.log(err))
     }, [])
@@ -78,4 +78,4 @@ const WeaponDetails = () => {
     )
 }
 
-export default WeaponDetails;
+export default ArmorDetails;

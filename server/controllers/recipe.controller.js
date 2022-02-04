@@ -29,3 +29,8 @@ module.exports.findAllRecipes = (req,res) => {
             res.json(err)
         })
 }
+
+module.exports.deleteRecipe=(req,res)=>{
+    Recipe.findOneAndDelete({_id:req.params.id})
+        .then()
+}
