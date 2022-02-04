@@ -33,6 +33,7 @@ function App() {
           <Route exact path={'/armors/:armor_type'}>
             <ArmorView />
           </Route>
+<<<<<<< HEAD
           <Route exact path={'/charms'}>
             <CharmView />
           </Route>
@@ -44,6 +45,9 @@ function App() {
           </Route>
           <Route exact path={'/charm/:equipment'}>
             <CharmDetails />
+=======
+          <Route exact path={'/:equipment'}>
+>>>>>>> 6e7874e3f7281fbb72253c5bb2b8a726ce961a73
           </Route>
         </Switch>
       </div>
